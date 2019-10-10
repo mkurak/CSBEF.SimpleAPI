@@ -1,9 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RuntimeFrameworkVersion>2.2.0</RuntimeFrameworkVersion>
-    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Mesut Kurak</Authors>
@@ -15,22 +13,18 @@
     <RepositoryUrl>https://github.com/mkurak/CSBEF.SimpleAPI</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>CSBEF Simple API</PackageTags>
+    <Version>1.1.0</Version>
+    <PackageReleaseNotes>- Core 3 updated
+- CSBEF.Core 2.0.1 updated</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CSBEF.Core" Version="1.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
-    <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
-    <PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
-    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
-    <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.2.6" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="CSBEF.Core" Version="2.0.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Modules\CSBEF.Module.UserActionLog\Bin\" />
+    <Folder Include="Modules\CSBEF.Module.UserManagement\Bin\" />
     <Folder Include="wwwroot\Storage\Upload\" />
   </ItemGroup>
 
@@ -43,11 +37,9 @@
     </Content>
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="..\..\..\CSBEF\CSBEF.Core\CSBEF.Core\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
+  <!--<Target Name="Modules" AfterTargets="AfterBuild">
+    <Copy SourceFiles="..\..\..\CSBEF.Module.UserManagement\CSBEF.Module.UserManagement\CSBEF.Module.UserManagement\bin\Release\netcoreapp3.0\CSBEF.Module.UserManagement.dll" DestinationFolder="Modules\CSBEF.Module.UserManagement\bin\" />
+    <Copy SourceFiles="..\..\..\CSBEF.Module.UserActionLog\CSBEF.Module.UserActionLog\CSBEF.Module.UserActionLog\bin\Release\netcoreapp3.0\CSBEF.Module.UserActionLog.dll" DestinationFolder="Modules\CSBEF.Module.UserActionLog\bin\" />
+  </Target>-->
 
 </Project>
