@@ -13,19 +13,22 @@
     <RepositoryUrl>https://github.com/mkurak/CSBEF.SimpleAPI</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>CSBEF Simple API</PackageTags>
-    <Version>1.1.0</Version>
-    <PackageReleaseNotes>- Core 3 updated
-- CSBEF.Core 2.0.1 updated</PackageReleaseNotes>
+    <Version>1.2.0</Version>
+    <PackageReleaseNotes>- CSBEF.Core 2.0.5 updated
+- Fixed Startup.cs
+- Fixed appsettings.json
+- Updated UserActionLog library
+- Updated UserManagement library</PackageReleaseNotes>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="CSBEF.Core" Version="2.0.1" />
-  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Modules\CSBEF.Module.UserActionLog\Bin\" />
     <Folder Include="Modules\CSBEF.Module.UserManagement\Bin\" />
     <Folder Include="wwwroot\Storage\Upload\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CSBEF.Core" Version="2.0.5" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,9 +40,9 @@
     </Content>
   </ItemGroup>
 
-  <!--<Target Name="Modules" AfterTargets="AfterBuild">
+  <Target Name="Modules" AfterTargets="AfterBuild">
     <Copy SourceFiles="..\..\..\CSBEF.Module.UserManagement\CSBEF.Module.UserManagement\CSBEF.Module.UserManagement\bin\Release\netcoreapp3.0\CSBEF.Module.UserManagement.dll" DestinationFolder="Modules\CSBEF.Module.UserManagement\bin\" />
     <Copy SourceFiles="..\..\..\CSBEF.Module.UserActionLog\CSBEF.Module.UserActionLog\CSBEF.Module.UserActionLog\bin\Release\netcoreapp3.0\CSBEF.Module.UserActionLog.dll" DestinationFolder="Modules\CSBEF.Module.UserActionLog\bin\" />
-  </Target>-->
+  </Target>
 
 </Project>

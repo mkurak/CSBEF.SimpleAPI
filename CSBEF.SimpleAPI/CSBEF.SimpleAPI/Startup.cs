@@ -24,8 +24,8 @@ namespace CSBEF.SimpleAPI
 
             GlobalConfiguration.DbProvider = _configuration["AppSettings:DBSettings:Provider"];
             GlobalConfiguration.DbConnectionString = _configuration["AppSettings:DBSettings:ConnectionString"];
-            GlobalConfiguration.sAppPath = env.ContentRootPath;
-            GlobalConfiguration.sWwwRootPath = env.WebRootPath;
+            GlobalConfiguration.SAppPath = env.ContentRootPath;
+            GlobalConfiguration.SWwwRootPath = env.WebRootPath;
         }
 
         public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -41,16 +41,22 @@ namespace CSBEF.SimpleAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors(builder => builder.AllowAnyHeader().AllowCredentials().AllowAnyMethod().WithOrigins(_configuration["CustomCorsOrigin"] != null ? _configuration["CustomCorsOrigin"] : "http://localhost:8080"));
-
-            app.UseHttpsRedirection();
-            app.UseRouting();
-            app.UseAuthorization();
             loggerFactory.AddSerilog();
+            app.UseStaticFiles();
+            app.UseRouting();
+            app.UseCors(options =>
+            {
+                options.AllowAnyHeader();
+                options.AllowAnyMethod();
+                options.AllowCredentials();
+                options.WithOrigins("http://localhost:8080");
+            });
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapHub<GlobalHub>("/api/signalr/GlobalHub");
+                endpoints.MapHub<GlobalHub>("/signalr/GlobalHub");
             });
         }
     }
