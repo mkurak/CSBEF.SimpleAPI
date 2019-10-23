@@ -13,12 +13,8 @@
     <RepositoryUrl>https://github.com/mkurak/CSBEF.SimpleAPI</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>CSBEF Simple API</PackageTags>
-    <Version>1.2.0</Version>
-    <PackageReleaseNotes>- CSBEF.Core 2.0.5 updated
-- Fixed Startup.cs
-- Fixed appsettings.json
-- Updated UserActionLog library
-- Updated UserManagement library</PackageReleaseNotes>
+    <Version>1.2.1</Version>
+    <PackageReleaseNotes>- Added some settings to CSBEF.Core launcher command.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

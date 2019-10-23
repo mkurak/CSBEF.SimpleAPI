@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Serialization;
 using Serilog;
 
 namespace CSBEF.SimpleAPI
@@ -30,7 +31,12 @@ namespace CSBEF.SimpleAPI
 
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-            var serviceInit = new APIStartServiceCollection().Init(_configuration, _hostingEnvironment, services);
+            var serviceInit = new APIStartServiceCollection().Init(_configuration, _hostingEnvironment, services, new Core.Models.ApiStartOptionsModel
+            {
+                JsonOptions_Using = true,
+                JsonOptions_PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.None,
+                JsonOptions_ContractResolver = new CamelCasePropertyNamesContractResolver()
+            });
             return serviceInit;
         }
 
