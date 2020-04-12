@@ -3,7 +3,6 @@ name: .NET Core
 on:
   push:
     branches: [ master ]
-    paths: 'CSBEF.SimpleAPI/*'
   pull_request:
     branches: [ master ]
 
