@@ -8,17 +8,14 @@
     <Company>Code Scientific</Company>
     <Description>CSBEF is a sample API application where all official modules are implemented. This application gives an idea of how the structure works and how the integration should be.</Description>
     <Copyright>2019 Code Scientific - Mesut Kurak</Copyright>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/mkurak/CSBEF.SimpleAPI</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mkurak/CSBEF.SimpleAPI</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>CSBEF Simple API</PackageTags>
-    <Version>3.1.0</Version>
+    <Version>3.1.1</Version>
     <PackageReleaseNotes>
-      - Updated Dotnet Core version (3.1)
-      - Updated CSBEF Dependency (3.1.0)
-      - Cleared some files and folders
-      - Re-Organized CSBEF integration
+      - Rebased All files and folders for github build
     </PackageReleaseNotes>
   </PropertyGroup>
 
