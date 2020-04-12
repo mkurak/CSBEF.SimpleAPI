@@ -20,11 +20,11 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dependencies
+      working-directory: ./CSBEF.SimpleAPI
       run: dotnet restore
-      working-directory: ./CSBEF.SimpleAPI
     - name: Build
+      working-directory: ./CSBEF.SimpleAPI
       run: dotnet build --configuration Release --no-restore
-      working-directory: ./CSBEF.SimpleAPI
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
       working-directory: ./CSBEF.SimpleAPI
+      run: dotnet test --no-restore --verbosity normal
