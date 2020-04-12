@@ -20,7 +20,7 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Change Current Directory
-      run: cd ./CSBEF.SimpleAPI
+      run: cd CSBEF.SimpleAPI
     - name: Install dependencies
       run: dotnet restore
     - name: Build
