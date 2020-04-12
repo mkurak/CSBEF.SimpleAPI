@@ -43,28 +43,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!-- <None Update="Modules\CSBEF.Module.UserActionLog\Bin\CSBEF.Module.UserActionLog.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Modules\CSBEF.Module.UserCloudManager\Bin\CSBEF.Module.UserCloudManager.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None> -->
     <None Update="Modules\CSBEF.Module.UserManagement\Bin\CSBEF.Module.UserManagement.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <!-- <None Update="Modules\CSBEF.Module.UserManagement\Bin\CSBEF.Module.UserCloudManager.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None> -->
   </ItemGroup>
-
-  <!-- <ItemGroup>
-    <ProjectReference Include="..\..\CSBEF\CSBEF.Core\CSBEF.Core.csproj" />
-  </ItemGroup> -->
-
-  <!-- <Target Name="Modules" AfterTargets="AfterBuild"> -->
-    <!-- <Copy SourceFiles="..\..\CSBEF.Module.UserManagement\CSBEF.Module.UserManagement\bin\Release\netcoreapp3.1\CSBEF.Module.UserManagement.dll" DestinationFolder="Modules\CSBEF.Module.UserManagement\bin\" /> -->
-    <!-- <Copy SourceFiles="..\..\..\CSBEF.Module.UserActionLog\CSBEF.Module.UserActionLog\CSBEF.Module.UserActionLog\bin\Release\netcoreapp3.0\CSBEF.Module.UserActionLog.dll" DestinationFolder="Modules\CSBEF.Module.UserActionLog\bin\" /> -->
-    <!-- <Copy SourceFiles="..\..\..\CSBEF.Module.UserCloudManager\CSBEF.Module.UserCloudManager\CSBEF.Module.UserCloudManager\bin\Release\netcoreapp3.0\CSBEF.Module.UserCloudManager.dll" DestinationFolder="Modules\CSBEF.Module.UserCloudManager\bin\" /> -->
-  <!-- </Target> -->
 
 </Project>
