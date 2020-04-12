@@ -11,7 +11,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env:
+      working-directory: ./CSBEF.SimpleAPI
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
@@ -19,8 +20,11 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dependencies
+      working-directory: ${{env.working-directory}}
       run: dotnet restore
     - name: Build
+      working-directory: ${{env.working-directory}}
       run: dotnet build --configuration Release --no-restore
     - name: Test
+      working-directory: ${{env.working-directory}}
       run: dotnet test --no-restore --verbosity normal
