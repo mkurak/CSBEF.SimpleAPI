@@ -19,11 +19,12 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
-    - name: Change Current Directory
-      run: cd CSBEF.SimpleAPI
     - name: Install dependencies
       run: dotnet restore
+      working-directory: ./CSBEF.SimpleAPI
     - name: Build
       run: dotnet build --configuration Release --no-restore
+      working-directory: ./CSBEF.SimpleAPI
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+      working-directory: ./CSBEF.SimpleAPI
