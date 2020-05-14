@@ -4,13 +4,16 @@
 CSBEF is a sample API application where all official modules are implemented. This application gives an idea of how the structure works and how the integration should be.
 
 # Current Version
-v3.1.1
+v3.1.2
 
 # Version Info
-- Rebased All files and folders for github build
+- CSBEF.Core updated
+- Module libraries updated
 
 # Status
 Completed, there is no planned development.
 
 # Modules included
-[UserManagement](https://github.com/mkurak/CSBEF.Module.UserManagement)
+[CSBEF.Module.UserManagement](https://github.com/mkurak/CSBEF.Module.UserManagement)
+[CSBEF.Module.UserCloudManager](https://github.com/mkurak/CSBEF.Module.UserCloudManager)
+[CSBEF.Module.UserActionLog](https://github.com/mkurak/CSBEF.Module.UserActionLog)
