@@ -14,6 +14,6 @@ v3.1.2
 Completed, there is no planned development.
 
 # Modules included
-[CSBEF.Module.UserManagement](https://github.com/mkurak/CSBEF.Module.UserManagement)
-[CSBEF.Module.UserCloudManager](https://github.com/mkurak/CSBEF.Module.UserCloudManager)
-[CSBEF.Module.UserActionLog](https://github.com/mkurak/CSBEF.Module.UserActionLog)
+- [CSBEF.Module.UserManagement](https://github.com/mkurak/CSBEF.Module.UserManagement)
+- [CSBEF.Module.UserCloudManager](https://github.com/mkurak/CSBEF.Module.UserCloudManager)
+- [CSBEF.Module.UserActionLog](https://github.com/mkurak/CSBEF.Module.UserActionLog)
