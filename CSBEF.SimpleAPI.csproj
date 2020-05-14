@@ -8,26 +8,25 @@
     <Company>Code Scientific</Company>
     <Description>CSBEF is a sample API application where all official modules are implemented. This application gives an idea of how the structure works and how the integration should be.</Description>
     <Copyright>2019 Code Scientific - Mesut Kurak</Copyright>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/mkurak/CSBEF.SimpleAPI</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mkurak/CSBEF.SimpleAPI</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>CSBEF Simple API</PackageTags>
-    <Version>3.1.1</Version>
-    <PackageReleaseNotes>
-      - Rebased All files and folders for github build
-    </PackageReleaseNotes>
+    <Version>3.1.2</Version>
+    <PackageReleaseNotes>- CSBEF.Core updated
+- Module libraries updated</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Modules\CSBEF.Module.UserActionLog\Bin\" />
-    <Folder Include="Modules\CSBEF.Module.UserCloudManager\Bin\" />
-    <Folder Include="Modules\CSBEF.Module.UserManagement\Bin\" />
-    <Folder Include="wwwroot\Storage\Upload\" />
+    <None Include="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CSBEF.Core" Version="3.1.0" />
+    <PackageReference Include="CSBEF.Core" Version="3.1.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,8 +39,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Modules\CSBEF.Module.UserManagement\Bin\CSBEF.Module.UserManagement.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Update="Modules\CSBEF.Module.UserActionLog\bin\CSBEF.Module.UserActionLog.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\CSBEF.Module.UserCloudManager\bin\CSBEF.Module.UserCloudManager.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\CSBEF.Module.UserManagement\bin\CSBEF.Module.UserManagement.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
