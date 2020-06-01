@@ -4,7 +4,7 @@
 CSBEF is a sample API application where all official modules are implemented. This application gives an idea of how the structure works and how the integration should be.
 
 # Current Version
-v3.1.9
+v3.1.10
 
 # Version Info
 Updated CSBEF.Core and modules
