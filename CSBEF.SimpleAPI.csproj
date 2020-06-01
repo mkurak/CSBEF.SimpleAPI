@@ -7,13 +7,13 @@
     <Authors>Mesut Kurak</Authors>
     <Company>Code Scientific</Company>
     <Description>CSBEF is a sample API application where all official modules are implemented. This application gives an idea of how the structure works and how the integration should be.</Description>
-    <Copyright>2019 Code Scientific - Mesut Kurak</Copyright>
+    <Copyright>2019-2020 Code Scientific - Mesut Kurak</Copyright>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/mkurak/CSBEF.SimpleAPI</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mkurak/CSBEF.SimpleAPI</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>CSBEF Simple API</PackageTags>
-    <Version>3.1.8</Version>
+    <Version>3.1.9</Version>
     <PackageReleaseNotes>Updated CSBEF.Core and modules</PackageReleaseNotes>
   </PropertyGroup>
 
